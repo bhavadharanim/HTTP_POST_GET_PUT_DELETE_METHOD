@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<h3>Display table</h3>
+<div class="table-responsive">
+<table class="table table-striped table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let i of Detail">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td> {{i.phone}}</td>
+    </tr>
+</table>
+</div>
+<h3>Insert Employee Detail</h3>
+   ID:<input type="number" [(ngModel)]="employees.id" class="form-control" id="exampleInputEmail1" placeholder="ID" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+
+   Name:<input type="text" [(ngModel)]="employees.name" class="form-control" placeholder="username" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+
+
+   Email:<input type="email" [(ngModel)]="employees.email" class="form-control" placeholder="Email ID" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+
+
+   Phone Number:<input type="number" [(ngModel)]="employees.phone" class="form-control" placeholder="Mobile number" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+
+<hr>
+
+
+
+<button (click)="onClk()" type="button" class="btn btn-primary" >submit</button>
+
+<button (click)="onClick()" type="button" class="btn btn-secondary ">display</button><br>
+<hr>
+<h3>Delete Employee Detail</h3>
+Enter the deleting Id:<input type="number" [(ngModel)]="ID" class="form-control" placeholder="enter ID" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+<button (click)="onSubmit()" class="btn btn-outline-success" >Submit</button><br>
+<hr>
+<h3>Update Employee Detail</h3>
+Enter the update the Id:<input type="number" [(ngModel)]="Enter_Id" class="form-control" placeholder="Enter ID" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+Enter the update the Name:<input type="text" [(ngModel)]="EMP.Name" class="form-control" placeholder="Email username" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+Enter the update the Email:<input type="text" [(ngModel)]="EMP.Email" class="form-control" placeholder="Email ID" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+Enter the update the Number:<input type="number" [(ngModel)]="EMP.Mobile_number" class="form-control" placeholder="Enter number" aria-label="Recipient's username" aria-describedby="basic-addon2"><br>
+<button (click)="Submit()" class="btn btn-outline-primary">Submit</button>
+
